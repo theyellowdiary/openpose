@@ -16,12 +16,7 @@ install:
   # This downloads the source to the Khronos ICD library
   - git clone --depth 1 https://github.com/KhronosGroup/OpenCL-ICD-Loader.git
   - ps: mv ./OpenCL-ICD-Loader/* .
-  # This downloads all the opencl header files
-  # The cmake build files expect a directory called inc
-  - ps: mkdir inc/CL_headers_repo
-  - git clone --depth 1 https://github.com/KhronosGroup/OpenCL-Headers.git inc/CL_headers_repo
-  - ps: pushd inc
-  
+
 
 before_build:
     - ps: $env:AMDAPPSDKROOT = "$env:OPENCL_ROOT"
