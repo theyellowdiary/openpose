@@ -4,7 +4,7 @@ clone_folder: c:\openpose
 build_script:
     - mkdir build
     - cd build
-    - cmake -DGPU_MODE=CPU_ONLY -G "Visual Studio 15 2017 Win64" ..
+    - cmake -DGPU_MODE=OPENCL -G "Visual Studio 15 2017 Win64" ..
     - cmake --build . --config "Release"
 
 after_build:
