@@ -11,8 +11,6 @@ install:
   - ps: 7z x opencl-icd-1.2.11.0.tar > $null
   - ps: mv .\icd\* .
   - ps: mkdir inc/CL > $null
-  - cmake -G "NMake Makefiles" ..
-  - nmake
   - cd %APPVEYOR_BUILD_FOLDER%
 
 
