@@ -46,7 +46,7 @@ install:
 
 before_build:
     - ps: $env:AMDAPPSDKROOT = "$env:OPENCL_ROOT"
-  - ps: dir $env:AMDAPPSDKROOT; dir $env:AMDAPPSDKROOT/lib; dir $env:AMDAPPSDKROOT/include;
+    - ps: dir $env:AMDAPPSDKROOT; dir $env:AMDAPPSDKROOT/lib; dir $env:AMDAPPSDKROOT/include;
 
 build_script:
     - mkdir build
