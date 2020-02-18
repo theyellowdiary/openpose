@@ -3,6 +3,12 @@ clone_folder: c:\openpose
 
 shallow_clone: true
 
+environment:
+  global:
+    OPENPOSE_ROOT: "%APPVEYOR_BUILD_FOLDER%\\bin\\nmake\\release"
+    OPENCL_ROOT: "%APPVEYOR_BUILD_FOLDER%\\bin\\opencl"
+    OPENCL_REGISTRY: "https://www.khronos.org/registry/cl"
+
 install:
   - echo Installing OpenCL
   - ps: mkdir $env:OPENCL_ROOT
